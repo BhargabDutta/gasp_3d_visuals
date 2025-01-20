@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bodystyle.css">
+</head>
+<body>
+    <div style="position: relative; z-index: 10;">
+        <section class="section hero">
+            <div class="container">
+                <h1>Revolutionary Product</h1>
+                <p>Transform your life with our groundbreaking innovation</p>
+            </div>
+        </section>
+    
+        <section class="section feature-left">
+            <div class="content-box">
+                <h2>Seamless Integration</h2>
+                <p>Experience the perfect harmony of technology and design. Our product seamlessly integrates into your daily routine, making life easier and more efficient.</p>
+            </div>
+        </section>
+    
+        <section class="section feature-center">
+            <div class="container">
+                <h2 style="color: white;">Powerful Performance</h2>
+                <p style="color: white;">Unleash unprecedented power with our cutting-edge technology. Handle complex tasks with ease and achieve more in less time.</p>
+            </div>
+        </section>
+    
+        <section class="section feature-right">
+            <div class="content-box">
+                <h2>Elegant Design</h2>
+                <p>Beauty meets functionality in our meticulously crafted design. Every detail has been considered to create an exceptional user experience.</p>
+            </div>
+        </section>
+    </div>
+    <canvas id="image-sequence" width="1158" height="770" ></canvas>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+    <!-- <script src="script.js"></script> -->
+    <script src="script.js"></script>
+    <script>
+        const sections = document.querySelectorAll('.section');
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>

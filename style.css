@@ -1,0 +1,14 @@
+body {
+    height: 300vh;
+    background: #000;
+  }
+  
+  canvas {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover; /* Ensure the image fills the entire canvas */
+      z-index: 1; /* Make sure it's behind the content */
+    }
