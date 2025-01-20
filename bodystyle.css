@@ -3,6 +3,14 @@
     padding: 0;
     box-sizing: border-box;
 }
+.mobile{
+    display: none;
+    color: white;
+}
+.main-cntr{
+    display: block;
+
+}
 
 body {
     font-family: 'Arial', sans-serif;
@@ -109,4 +117,15 @@ body {
 
 .button:hover {
     transform: scale(1.05);
+}
+
+/* For mobile devices (max-width: 480px) */
+@media only screen and (max-width: 480px) {
+    .main-cntr{
+        display: none;
+    }
+    .mobile{
+        display: block;
+        
+    }
 }
